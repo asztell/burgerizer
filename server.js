@@ -10,7 +10,7 @@ var express 		= require('express');
 	routes 			= require('./controllers/burgers_controller.js');
 
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + '/public'));
